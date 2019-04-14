@@ -32,7 +32,7 @@ ul {
 
 /* Header */
 #main-header {
-  height: 48px;
+  height: 55px;
   width: 100%;
   z-index: 10;
   position: fixed;
@@ -149,7 +149,7 @@ ul {
 
 #hero {
   position: relative;
-  top: 48px;
+  top: 55px;
   left: 0;
   padding: 4px;
   display: grid;
@@ -187,7 +187,6 @@ ul {
   right: 4px;
   opacity: 1;
   z-index: 4;
-
 }
 
 .cover-trigger {
@@ -292,4 +291,76 @@ ul {
 
 .cover-item svg {
   margin-right: 4px;
+}
+
+/* Site Wrapper */
+#site-wrapper {
+  margin: 50px auto;
+  max-width: 1192px;
+  padding: 0 20px;
+}
+
+#latest-news {
+  width: 1152px;
+  margin-bottom: 56px;
+  padding-top: 24px;
+}
+
+#latest-news h2 {
+  margin-bottom: 24px;
+  font-family: var(--source-sans);
+  font-size: 28px;
+  color: #f42;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+#latest-news-grid {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+}
+
+.news-grid-item {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding: 12px;
+}
+
+.grid-item-content {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item-img {
+  background-color: #000;
+  background-size: cover;
+  background-position: 50%;
+  height: 135px;
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.grid-item-h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.grid-item-list {
+  font-size: 13px;
+  line-height: 20px;
+  color: #aaa;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 200px;
 }
