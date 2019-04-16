@@ -58,13 +58,28 @@ ul {
   list-style: none;
 }
 
+.nav-logo {
+  display: block;
+}
+
+.nav-logo a {
+  position: relative;
+  z-index: 2;
+  background-color: #f42;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+  display: block;
+  height: 55px;
+  padding: 16px 20px;
+  width: 106px;
+}
+
 .nav-item:first-child a {
   padding-left: 20px;
 }
 
 .nav-link {
   font-family: var(--roboto-mono);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   color: #aaa;
@@ -72,7 +87,7 @@ ul {
   height: 48px;
   letter-spacing: .04em;
   line-height: 1;
-  padding: 18px 10px 0;
+  padding: 21px 10px 0;
   text-decoration: none;
 }
 
@@ -81,7 +96,6 @@ ul {
   flex-direction: row;
   align-items: center;
   padding-right: 8px;
-  border-left: 1px solid #eee;
 }
 
 .tnw_logo {
@@ -93,12 +107,12 @@ ul {
 }
 
 .search_logo {
+  border-left: 1px solid #eee;
   display: block;
   height: 55px;
   opacity: .25;
   padding: 16px;
   width: 55px;
-  will-change: opacity;
 }
 
 .header-clock {
@@ -786,7 +800,40 @@ ul {
   vertical-align: baseline;
 }
 
-@media only screen and (max-width: 767px) {
+.img-hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .search_logo {
+    border-left: 1px solid #ededed;
+    border-right: 1px solid #EDEDED;
+    opacity: 1;
+  }
+
+  .img-hamburger {
+    display: block;
+    height: 54px;
+    width: 54px;
+    padding: 16px;
+  }
+
+  .nav-logo a {
+    position: relative;
+    z-index: 2;
+    background-color: #f42;
+    background: linear-gradient(to bottom right, #c09, #f42 85%);
+    display: block;
+    height: 55px;
+    padding: 16px 20px;
+    width: 106px;
+  }
+
+  .clock-number {
+    font-size: 22px;
+  }
+
   #hero {
     display: grid;
     grid-template-columns: 1fr;
@@ -799,4 +846,135 @@ ul {
   #first-story {
     grid-row: span 1;
   }
+
+  .hero-logo,
+  .hero-date,
+  .cover-gradient,
+  .header-left,
+  .tnw_logo,
+  .clock-span,
+  .header-btn {
+    display: none;
+  }
+
+  .cover-title {
+    margin-bottom: .25em;
+    font-family: var(--source-sans);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -.015em;
+  }
+
+  #latest-news-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .item-content,
+  .deal-item-content {
+    min-height: 72px;
+    padding-left: 88px;
+    position: relative;
+  }
+
+  .item-img,
+  .d-item-img {
+    left: 0;
+    padding-top: 75px;
+    position: absolute;
+    top: 0;
+    width: 75px;
+    height: 0;
+  }
+
+  .d-item-img {
+    background-position: 50% 100%;
+  }
+
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .section-list-item {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding-left: 0;
+  }
+
+  .section-list-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .section-list-item:nth-child(1) {
+    order: 3;
+  }
+
+  .section-list-item:nth-child(2) {
+    order: 2;
+  }
+
+  .section-list-item:nth-child(2),
+  .section-list-item:nth-child(3) {
+    border-left: none;
+  }
+
+  #latest-fundings {
+    margin-bottom: 28px;
+  }
+
+  #latest-funds-container,
+  #latest-deals-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .funds-item {
+    height: 246px;
+  }
+
+  .funds-item:last-child {
+    display: none;
+  }
+
+  #apps-gear-tech {
+    margin-bottom: 40px;
+  }
+
+  #apps-gear-tech-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+
+  .agt-latest {
+    justify-content: space-between;
+  }
+
+  .d-item-dealPrice-new {
+    font-size: 14px;
+  }
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .cover-title,
+  .hero-story:nth-child(2) .cover-title,
+  .hero-story:nth-child(3) .cover-title {
+    font-size: 20px;
+  }
+
 }
